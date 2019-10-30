@@ -119,7 +119,6 @@ h3 {
 }
 
 .container {
-  width: 100%;
   padding: 0px 15px;
   margin-left: auto;
   margin-right: auto;

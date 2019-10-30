@@ -1,6 +1,6 @@
 <template>
   <div class="call">
-    <div v-for="item in items" :key="item.number">
+    <div class="call-item" v-for="item in items" :key="item.number">
       <a :href="'tel:' + item.number">
         <img :src="item.img"/>
       </a>
@@ -40,6 +40,15 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 15px;
+}
+@media (max-width: 767px) {
+  .call {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.call-item {
+  text-align: center;
 }
 
 .call img {
