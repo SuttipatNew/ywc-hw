@@ -39,10 +39,15 @@ export default {
   grid-template-columns: repeat(6, 1fr);
 }
 
+@media (max-width: 767px) {
+  .sponsors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media (max-width: 426px) {
   .sponsors {
     padding: 0 10%;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
