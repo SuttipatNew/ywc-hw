@@ -1,19 +1,19 @@
 <template>
   <div class="footer">
-    <ul>
-      <li>
+    <div class="container">
+      <div class="footer-item">
         Copyright &copy; 2003-2019
-      </li>
-      <li>
+      </div>
+      <div class="footer-item">
         ลงทะเบียนเข้าร่วมมาตรการ
-      </li>
-      <li>
+      </div>
+      <div class="footer-item">
         ขั้นตอนการเข้าร่วมทั้งหมด
-      </li>
-      <li>
+      </div>
+      <div class="footer-item">
         รายชื่อร้านค้าที่เข้าร่วมรายการ
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,20 +30,9 @@ div.footer {
   font-size: 14px;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  text-align: center;
-  font-family: TATSanaChon;
-  padding: 0px 37px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
-
-li {
-  display: inline-block;
-  padding: 14px 15px;
-  font-weight: bold;
+.footer-item {
+  font-family: TATSanaSuksaBold;
+  padding: 8px 0px;
   grid-column: span 3;
   text-align: left;
 }
