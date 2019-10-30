@@ -188,8 +188,11 @@ h3 {
   .content-wrapper {
     grid-column: span 12;
   }
-  .detail, .condition, h3 {
+  .detail, .condition, h3, #pre-duration {
     font-size: 16px;
+  }
+  #duration {
+    font-size: 30px;
   }
 }
 @media (min-width: 576px) {

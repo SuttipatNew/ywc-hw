@@ -61,6 +61,7 @@ button:hover {
   button {
     font-size: 18px;
     padding: 10px;
+    margin: 10px 0;
   }
 }
 
