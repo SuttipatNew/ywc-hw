@@ -31,6 +31,7 @@ ul {
   top: 0px;
   font-family: TATSanaChon;
   box-shadow: rgba(0, 0, 0, 0.0980392) 0px 4px 10px 0px;
+  z-index: 10;
 }
 
 li {

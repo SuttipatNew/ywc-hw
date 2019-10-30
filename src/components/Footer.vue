@@ -27,21 +27,24 @@ export default {
 div.footer {
   background-color: rgb(33, 58, 143);
   color: white;
+  font-size: 14px;
 }
 
 ul {
   list-style: none;
   margin: 0;
-  padding-left: 0px;
   text-align: center;
-  width: 100vw;
   font-family: TATSanaChon;
+  padding: 0px 37px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 li {
   display: inline-block;
   padding: 14px 15px;
-  font-size: 14px;
   font-weight: bold;
+  grid-column: span 3;
+  text-align: left;
 }
 </style>
