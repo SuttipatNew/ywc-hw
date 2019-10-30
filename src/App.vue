@@ -37,7 +37,7 @@
       <Sponsors />
     </div>
     <FootMenu />
-    <Footer />
+    <Footer :items="navbarItems" />
   </div>
 </template>
 

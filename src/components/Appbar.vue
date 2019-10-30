@@ -1,18 +1,20 @@
 <template>
   <div class="appbar">
     <img :src="logo" />
-    <button class="hamburger" @click="toggleNavbar">
-      =
-    </button>
+    <Hamburger @click.native="toggleNavbar" />
   </div>
 </template>
 
 <script>
 import logo from '../assets/images/footer.png'
 import { EventBus } from '../eventBus.js'
+import Hamburger from './Hamburger.vue'
 
 export default {
   name: 'Appbar',
+  components: {
+    Hamburger
+  },
   data() {
     return {
       logo
@@ -29,6 +31,8 @@ export default {
 <style scoped>
 .appbar {
   height: 60px;
+  line-height: 60px;
+  align-items: center;
   box-sizing: border-box;
   position: fixed;
   z-index: 11;

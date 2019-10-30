@@ -4,14 +4,10 @@
       <div class="footer-item">
         Copyright &copy; 2003-2019
       </div>
-      <div class="footer-item">
-        ลงทะเบียนเข้าร่วมมาตรการ
-      </div>
-      <div class="footer-item">
-        ขั้นตอนการเข้าร่วมทั้งหมด
-      </div>
-      <div class="footer-item">
-        รายชื่อร้านค้าที่เข้าร่วมรายการ
+      <div class="footer-item" v-for="index in 3" :key="index">
+        <a :href="items[index - 1].href">
+          {{ labels[index - 1] }}
+        </a>
       </div>
     </div>
   </div>
@@ -19,7 +15,19 @@
 
 <script>
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  props: {
+    items: Array
+  },
+  data() {
+    return {
+      labels: [
+        'ลงทะเบียนเข้าร่วมมาตรการ',
+        'ขั้นตอนการเข้าร่วมทั้งหมด',
+        'รายชื่อร้านค้าที่เข้าร่วมรายการ'
+      ]
+    }
+  }
 }
 </script>
 
