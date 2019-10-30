@@ -27,6 +27,7 @@
       <Call />
       <Sponsors />
     </div>
+    <FootMenu />
     <Footer />
   </div>
 </template>
@@ -37,6 +38,7 @@ import Banner from './components/Banner.vue'
 import Register from './components/Register.vue'
 import Call from './components/Call.vue'
 import Sponsors from './components/Sponsors.vue'
+import FootMenu from './components/FootMenu'
 import Footer from './components/Footer.vue'
 
 export default {
@@ -47,6 +49,7 @@ export default {
     Register,
     Call,
     Sponsors,
+    FootMenu,
     Footer
   },
   data() {
@@ -96,6 +99,11 @@ p {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 h2 {
   margin: 0;
   font-family: TATSanaSuksaBold;
@@ -115,7 +123,6 @@ h3 {
   padding: 0px 15px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 15px;

@@ -21,7 +21,7 @@ export default {
 .register {
   padding: 0px 15px;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 95px;
 }
 
 hr {
