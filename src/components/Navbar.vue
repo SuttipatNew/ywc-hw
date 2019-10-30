@@ -20,6 +20,8 @@ export default {
 <style scoped>
 
 ul {
+  height: 60px;
+  box-sizing: border-box;
   list-style: none;
   margin: 0;
   padding-left: 0px;

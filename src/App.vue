@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Appbar />
     <Navbar :items="navbarItems" />
     <Banner />
     <p id="pre-duration" class="text-center">ตั้งแต่วันที่</p>
@@ -33,6 +34,7 @@
 </template>
 
 <script>
+import Appbar from './components/Appbar.vue'
 import Navbar from './components/Navbar.vue'
 import Banner from './components/Banner.vue'
 import Register from './components/Register.vue'
@@ -44,6 +46,7 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'app',
   components: {
+    Appbar,
     Navbar,
     Banner,
     Register,
