@@ -69,7 +69,7 @@ export default {
       navbarItems: [
       ],
       detail: null,
-      condition: null
+      condition: null,
     }
   },
   mounted() {

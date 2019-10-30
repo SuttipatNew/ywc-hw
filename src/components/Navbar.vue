@@ -1,5 +1,5 @@
 <template>
-  <ul class="navbar">
+  <ul :class="'navbar' + (expanded ? ' expanded' : '')">
     <li v-for="item in items" :key="item.label">
       <a :href="item.href">
         {{ item.label }}
@@ -9,10 +9,22 @@
 </template>
 
 <script>
+import { EventBus } from '../eventBus.js'
+
 export default {
   name: 'Navbar',
   props: {
-    items: Array
+    items: Array,
+  },
+  data() {
+    return {
+      expanded: false
+    }
+  },
+  created() {
+    EventBus.$on('toggle-navbar', () => {
+      this.expanded = !this.expanded
+    })
   }
 }
 </script>
@@ -41,15 +53,34 @@ li {
   padding: 14px 15px;
   font-size: 14px;
   font-weight: bold;
+  color: #333333;
 }
 
 a {
   text-decoration: none;
-  color: #333333;
   transition: all 0.3s ease-in-out 0s;
 }
 
 a:hover {
   color: #213A8F;
+}
+
+@media (max-width: 577px) {
+  ul {
+    padding-top: 60px;
+    transition: height .35s ease;
+    overflow: hidden;
+  }
+  li {
+    display: block;
+    text-align: right;
+    font-family: TATSanaSuksa;
+    color: rgba(0,0,0,.5);
+    font-size: 16px;
+    font-weight: normal;
+  }
+  .expanded {
+    height: 237.6px;
+  }
 }
 </style>

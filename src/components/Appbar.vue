@@ -1,7 +1,7 @@
 <template>
   <div class="appbar">
     <img :src="logo" />
-    <button class="hamburger">
+    <button class="hamburger" @click="toggleNavbar">
       =
     </button>
   </div>
@@ -9,11 +9,18 @@
 
 <script>
 import logo from '../assets/images/footer.png'
+import { EventBus } from '../eventBus.js'
+
 export default {
   name: 'Appbar',
   data() {
     return {
       logo
+    }
+  },
+  methods: {
+    toggleNavbar() {
+      EventBus.$emit('toggle-navbar')
     }
   }
 }
