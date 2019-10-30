@@ -8,9 +8,17 @@
     <Register />
     <div class="container">
       <div class="content-wrapper">
-        <h2>มาตรการส่งเสริมการบริโภค</h2>
-        <h2>
-          ในประเทศ
+        <div class="big-title">
+          <h2>มาตรการส่งเสริมการบริโภค</h2>
+          <h2>
+            ในประเทศ
+            <span class="nowrap">
+              “ชิมช้อปใช้”
+            </span>
+          </h2>
+        </div>
+        <h2 class="small-title">
+          มาตรการส่งเสริมการบริโภคในประเทศ
           <span class="nowrap">
             “ชิมช้อปใช้”
           </span>
@@ -115,6 +123,10 @@ h2 {
   line-height: 1.6;
 }
 
+.small-title {
+  font-size: 24px;
+}
+
 h3 {
   margin: 0;
   font-family: TATSanaSuksaBold;
@@ -129,32 +141,6 @@ h3 {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 15px;
 }
-@media (max-width: 577px) {
-  .container {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
 
 .nowrap {
   white-space: nowrap;
@@ -162,10 +148,6 @@ h3 {
 
 .text-center {
   text-align: center;
-}
-
-.content-wrapper {
-  grid-column: span 10;
 }
 
 #pre-duration {
@@ -194,4 +176,47 @@ h3 {
 .condition p {
   margin-top: 0.5rem;
 }
+
+@media (max-width: 577px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .big-title {
+    display: none;
+  }
+  .content-wrapper {
+    grid-column: span 12;
+  }
+  .detail, .condition, h3 {
+    font-size: 16px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .small-title {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .content-wrapper {
+    grid-column: span 10;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 </style>
