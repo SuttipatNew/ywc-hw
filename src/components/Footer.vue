@@ -36,4 +36,16 @@ div.footer {
   grid-column: span 3;
   text-align: left;
 }
+
+@media (max-width: 577px) {
+  div.footer {
+    padding: 15px 0px;
+  }
+
+  .footer-item {
+    grid-column: span 12;
+    padding: 0.5rem 2rem;
+    font-size: 12px;
+  }
+}
 </style>
