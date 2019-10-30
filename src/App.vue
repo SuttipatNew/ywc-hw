@@ -129,6 +129,12 @@ h3 {
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 15px;
 }
+@media (max-width: 577px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
 @media (min-width: 576px) {
   .container {
     max-width: 540px;
