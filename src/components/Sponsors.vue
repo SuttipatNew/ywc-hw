@@ -37,7 +37,13 @@ export default {
   grid-column: span 12;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 15px;
+}
+
+@media (max-width: 426px) {
+  .sponsors {
+    padding: 0 10%;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .sponsor {
@@ -46,6 +52,12 @@ export default {
 
 .sponsors img {
   width: 120px;
+}
+
+@media (max-width: 426px) {
+  .sponsors img {
+    width: 56px;
+  }
 }
 
 </style>
