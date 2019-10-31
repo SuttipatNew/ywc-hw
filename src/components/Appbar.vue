@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 .appbar {
-  height: 60px;
+  height: 64px;
   line-height: 60px;
   align-items: center;
   box-sizing: border-box;

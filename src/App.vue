@@ -154,6 +154,7 @@ h3 {
   font-size: 16px;
   font-family: TATSanaSuksaBold;
   margin-top: 26px;
+  font-weight: bold;
 }
 
 #duration {
@@ -161,6 +162,7 @@ h3 {
   color: #E6332A;
   font-size: 48px;
   font-family: TATSanaSuksaBold;
+  font-weight: bold;
 }
 
 .detail {
