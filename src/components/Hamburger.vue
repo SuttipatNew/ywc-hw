@@ -43,6 +43,7 @@ export default {
   background-color: #333333;
   width: 30px;
   transition: .25s ease-in-out;
+  border-radius: 2px;
 }
 
 .opened .hamburger--1 {
