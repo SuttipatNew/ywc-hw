@@ -4,8 +4,8 @@
       <div class="footer-item">
         Copyright &copy; 2003-2019
       </div>
-      <div class="footer-item" v-for="index in 3" :key="index">
-        <a :href="items[index - 1].href">
+      <div class="footer-item" v-for="(item, index) in items" :key="index">
+        <a :href="item.href">
           {{ labels[index - 1] }}
         </a>
       </div>
