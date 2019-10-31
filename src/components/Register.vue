@@ -1,12 +1,14 @@
 <template>
   <div class="register">
-    <button id="register-button">
-      <span>ลงทะเบียนเฟส 2</span>
-      <br />
-      <span>ตั้งแต่วันที่ 24 ต.ค. 62 วันละ 2 รอบ เวลา 6.00 และ 18.00 น.</span>
-      <br />
-      <span>(จำกัดจำนวนผู้ลงทะเบียนรอบละ 5 แสนคน รวม 1 ล้านคนต่อวัน)</span>
-    </button>
+    <a href="https://regist.xn--b3caa1e2a7e2b0h2be.com/Register/">
+      <button id="register-button">
+        <span>ลงทะเบียนเฟส 2</span>
+        <br />
+        <span>ตั้งแต่วันที่ 24 ต.ค. 62 วันละ 2 รอบ เวลา 6.00 และ 18.00 น.</span>
+        <br />
+        <span>(จำกัดจำนวนผู้ลงทะเบียนรอบละ 5 แสนคน รวม 1 ล้านคนต่อวัน)</span>
+      </button>
+    </a>
     <hr />
   </div>
 </template>
@@ -49,12 +51,12 @@ button {
   font-family: TATSanaSuksaBold;
   box-shadow: rgba(28, 78, 132, 0.4) 0px 15px 30px 0px;
   outline: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 button:hover {
   background-color: #FBBC33;
   box-shadow: none;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 @media (max-width: 577px) {
