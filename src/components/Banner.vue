@@ -53,6 +53,17 @@ export default {
   vertical-align: middle;
 }
 
+@media (max-width: 769px) {
+  .banner-item {
+    height: 242px;
+    line-height: 242px;
+  }
+  #banner-logo {
+    width: 146px;
+    height: 173px;
+  }
+}
+
 @media (max-width: 577px) {
   .banner-item {
     height: 221px;
@@ -64,14 +75,5 @@ export default {
   }
 }
 
-@media (max-width: 769px) {
-  .banner-item {
-    height: 242px;
-    line-height: 242px;
-  }
-  #banner-logo {
-    width: 146px;
-    height: 173px;
-  }
-}
+
 </style>
