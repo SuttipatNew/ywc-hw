@@ -1,7 +1,9 @@
 <template>
   <div class="sponsors">
-    <div class="sponsor" v-for="image in images" :key="image">
-      <img :src="image" />
+    <div class="sponsor" v-for="(image, index) in images" :key="image">
+      <a :href="urls[index]">
+        <img :src="image" />
+      </a>
     </div>
   </div>
 </template>
@@ -25,6 +27,14 @@ export default {
         ktb_img,
         mots_img,
         tat_img
+      ],
+      urls: [
+        'https://www.mof.go.th/th/home',
+        'http://www.fpo.go.th',
+        'https://www.cgd.go.th',
+        'https://www.newcb.ktb.co.th',
+        'https://www.mots.go.th',
+        'https://thai.tourismthailand.org'
       ]
     }
   }
