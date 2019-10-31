@@ -6,7 +6,7 @@
       </div>
       <div class="footer-item" v-for="(item, index) in items" :key="index">
         <a :href="item.href">
-          {{ labels[index - 1] }}
+          {{ labels[index] }}
         </a>
       </div>
     </div>
