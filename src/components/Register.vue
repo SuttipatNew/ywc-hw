@@ -57,4 +57,12 @@ button:hover {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+@media (max-width: 577px) {
+  button {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+}
+
 </style>

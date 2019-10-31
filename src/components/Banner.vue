@@ -37,7 +37,6 @@ export default {
 .banner {
   margin-top: 60px;
   position: relative;
-  height: 350px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -47,10 +46,32 @@ export default {
   background-size: cover;
   text-align: center;
   line-height: 350px;
+  height: 350px;
 }
 
 #banner-logo {
   vertical-align: middle;
 }
 
+@media (max-width: 577px) {
+  .banner-item {
+    height: 221px;
+    line-height: 221px;
+  }
+  #banner-logo {
+    width: 110px;
+    height: 131px;
+  }
+}
+
+@media (max-width: 769px) {
+  .banner-item {
+    height: 242px;
+    line-height: 242px;
+  }
+  #banner-logo {
+    width: 146px;
+    height: 173px;
+  }
+}
 </style>
