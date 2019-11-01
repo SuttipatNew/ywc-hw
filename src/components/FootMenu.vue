@@ -97,4 +97,20 @@ h3 {
   color: #E6332A;
   font-family: TATSanaSuksa;
 }
+
+@media (max-width: 577px) {
+  div.foot-menu {
+    padding: 44px 30px;
+  }
+  .foot-menu-item {
+    grid-column: span 12;
+  }
+  #foot-menu-logo {
+    width: 145px;
+  }
+  h3 {
+    margin: 15px 0px 10px 0px;
+    font-size: 16px;
+  }
+}
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class="sponsors">
-    <div class="sponsor" v-for="image in images" :key="image">
-      <img :src="image" />
+    <div class="sponsor" v-for="(image, index) in images" :key="image">
+      <a :href="urls[index]">
+        <img :src="image" />
+      </a>
     </div>
   </div>
 </template>
@@ -25,6 +27,14 @@ export default {
         ktb_img,
         mots_img,
         tat_img
+      ],
+      urls: [
+        'https://www.mof.go.th/th/home',
+        'http://www.fpo.go.th',
+        'https://www.cgd.go.th',
+        'https://www.newcb.ktb.co.th',
+        'https://www.mots.go.th',
+        'https://thai.tourismthailand.org'
       ]
     }
   }
@@ -37,7 +47,18 @@ export default {
   grid-column: span 12;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-column-gap: 15px;
+}
+
+@media (max-width: 767px) {
+  .sponsors {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 426px) {
+  .sponsors {
+    padding: 0 10%;
+  }
 }
 
 .sponsor {
@@ -46,6 +67,12 @@ export default {
 
 .sponsors img {
   width: 120px;
+}
+
+@media (max-width: 426px) {
+  .sponsors img {
+    width: 56px;
+  }
 }
 
 </style>

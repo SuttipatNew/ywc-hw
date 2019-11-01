@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Appbar />
     <Navbar :items="navbarItems" />
     <Banner />
     <p id="pre-duration" class="text-center">ตั้งแต่วันที่</p>
@@ -7,9 +8,17 @@
     <Register />
     <div class="container">
       <div class="content-wrapper">
-        <h2>มาตรการส่งเสริมการบริโภค</h2>
-        <h2>
-          ในประเทศ
+        <div class="big-title">
+          <h2>มาตรการส่งเสริมการบริโภค</h2>
+          <h2>
+            ในประเทศ
+            <span class="nowrap">
+              “ชิมช้อปใช้”
+            </span>
+          </h2>
+        </div>
+        <h2 class="small-title">
+          มาตรการส่งเสริมการบริโภคในประเทศ
           <span class="nowrap">
             “ชิมช้อปใช้”
           </span>
@@ -28,11 +37,12 @@
       <Sponsors />
     </div>
     <FootMenu />
-    <Footer />
+    <Footer :items="navbarItems" />
   </div>
 </template>
 
 <script>
+import Appbar from './components/Appbar.vue'
 import Navbar from './components/Navbar.vue'
 import Banner from './components/Banner.vue'
 import Register from './components/Register.vue'
@@ -44,6 +54,7 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'app',
   components: {
+    Appbar,
     Navbar,
     Banner,
     Register,
@@ -58,7 +69,7 @@ export default {
       navbarItems: [
       ],
       detail: null,
-      condition: null
+      condition: null,
     }
   },
   mounted() {
@@ -112,6 +123,10 @@ h2 {
   line-height: 1.6;
 }
 
+.small-title {
+  font-size: 24px;
+}
+
 h3 {
   margin: 0;
   font-family: TATSanaSuksaBold;
@@ -119,33 +134,12 @@ h3 {
 }
 
 .container {
-  width: 100%;
   padding: 0px 15px;
   margin-left: auto;
   margin-right: auto;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 15px;
-}
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
 }
 
 .nowrap {
@@ -156,14 +150,11 @@ h3 {
   text-align: center;
 }
 
-.content-wrapper {
-  grid-column: span 10;
-}
-
 #pre-duration {
   font-size: 16px;
   font-family: TATSanaSuksaBold;
   margin-top: 26px;
+  font-weight: bold;
 }
 
 #duration {
@@ -171,6 +162,7 @@ h3 {
   color: #E6332A;
   font-size: 48px;
   font-family: TATSanaSuksaBold;
+  font-weight: bold;
 }
 
 .detail {
@@ -186,4 +178,50 @@ h3 {
 .condition p {
   margin-top: 0.5rem;
 }
+
+@media (max-width: 577px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .big-title {
+    display: none;
+  }
+  .content-wrapper {
+    grid-column: span 12;
+  }
+  .detail, .condition, h3, #pre-duration {
+    font-size: 16px;
+  }
+  #duration {
+    font-size: 30px;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+  .small-title {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .content-wrapper {
+    grid-column: span 10;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
 </style>

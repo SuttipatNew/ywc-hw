@@ -1,10 +1,9 @@
 <template>
   <div class="banner">
     <div
-      class="banner-item" 
+      :class="'banner-item banner-item-' + index" 
       v-for="index in 3" 
       :key="index"
-      :style="`background-image: url(${bannerBgs[index - 1]});`"
     >
       <img id="banner-logo" :src="logo" v-if="index == 2" />
     </div>
@@ -12,20 +11,12 @@
 </template>
 
 <script>
-import bg1 from '../assets/images/banner-left.png'
-import bg2 from '../assets/images/banner-center.png'
-import bg3 from '../assets/images/banner-right.png'
 import logo from '../assets/images/banner.png'
 
 export default {
   name: 'Banner',
   data() {
     return {
-      bannerBgs: [
-        bg1,
-        bg2,
-        bg3
-      ],
       logo: logo
     }
   }
@@ -37,7 +28,6 @@ export default {
 .banner {
   margin-top: 60px;
   position: relative;
-  height: 350px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -47,10 +37,54 @@ export default {
   background-size: cover;
   text-align: center;
   line-height: 350px;
+  height: 350px;
+}
+
+.banner-item-1 {
+  background-image: url('../assets/images/banner-left.png');
+}
+.banner-item-2 {
+  background-image: url('../assets/images/banner-center.png');
+}
+.banner-item-3 {
+  background-image: url('../assets/images/banner-right.png');
 }
 
 #banner-logo {
   vertical-align: middle;
+  width: 240px;
 }
+
+@media (max-width: 769px) {
+  .banner-item {
+    height: 242px;
+    line-height: 242px;
+  }
+  #banner-logo {
+    width: 146px;
+    height: 173px;
+  }
+  .banner-item-1 {
+    background-image: url('../assets/images/banner-left-s.png');
+  }
+  .banner-item-2 {
+    background-image: url('../assets/images/banner-center-s.png');
+  }
+  .banner-item-3 {
+    background-image: url('../assets/images/banner-right-s.png');
+  }
+}
+
+@media (max-width: 577px) {
+  .banner-item {
+    height: 221px;
+    line-height: 221px;
+  }
+  #banner-logo {
+    width: 110px;
+    height: 131px;
+  }
+}
+
 
 </style>
